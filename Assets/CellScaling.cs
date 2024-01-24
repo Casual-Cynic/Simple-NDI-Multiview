@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class CellScaling : MonoBehaviour
 {
-    [SerializeField]
-    GameObject NDIManager;
+    [SerializeField] GameObject NDIManager;
 
     void Update()
     {
         GridLayoutGroup grid = GetComponent<GridLayoutGroup>();
         grid.cellSize = NDIManager.GetComponent<NDIManger>().CurrentCellSize;
+        //Debug.Log(grid.cellSize);
     }
 }

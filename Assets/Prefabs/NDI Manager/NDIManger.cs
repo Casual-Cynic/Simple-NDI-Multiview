@@ -11,7 +11,7 @@ public class NDIManger : MonoBehaviour
     public GameObject NDI_RECEIVER_OBJ;
     [SerializeField]
     public Vector2 INPUT_RESOLUTION;
-    List<string> ndi_names;
+    public List<string> ndi_names;
 
     public Vector2 CurrentCellSize;
 
