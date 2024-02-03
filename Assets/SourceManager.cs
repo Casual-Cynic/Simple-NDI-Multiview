@@ -17,10 +17,8 @@ public class SourceManager : MonoBehaviour
         //Debug.Log("Selected Source: " + "["+currentIndex+"] "+currentSourceName);
     }
 
-    private void UpdateSources()
+    public void UpdateDropdownSources(List<string> ndi_names)
     {
-        List<string> ndi_names = NDIManger.GetComponent<NDIManger>().ndi_names;
-
         foreach (string _sourceName in ndi_names)
         {
             bool entryExists = false;
@@ -43,6 +41,8 @@ public class SourceManager : MonoBehaviour
         }
 
         dropdown.RefreshShownValue();
+
+        Debug.Log("Updated Dropdown List with [" + ndi_names.Count + "] entries");
     }
 
     public void AddActiveSource()
@@ -68,10 +68,5 @@ public class SourceManager : MonoBehaviour
         ActiveSource.transform.SetParent(NDIManger.transform);
         ActiveSource.tag = "Untagged";
         Debug.Log("Removed Active Source: " + ActiveSource.name);
-    }
-
-    public void Update()
-    {
-        UpdateSources();
     }
 }

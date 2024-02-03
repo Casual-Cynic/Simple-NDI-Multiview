@@ -4,11 +4,14 @@ using UnityEngine;
 using Klak.Ndi;
 using System.Linq;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class NDIManger : MonoBehaviour
 {
     [SerializeField]
     public GameObject NDI_RECEIVER_OBJ;
+    [SerializeField]
+    public GameObject SOURCE_DROPDOWN;
     [SerializeField]
     public Vector2 INPUT_RESOLUTION;
     public List<string> ndi_names;
@@ -17,7 +20,7 @@ public class NDIManger : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(NDISearch());
+        //StartCoroutine(NDISearch());
     }
 
     void Update()
@@ -39,11 +42,43 @@ public class NDIManger : MonoBehaviour
         Vector2 CurrentCellSize = new Vector2(resolution.x / square_size, resolution.y / square_size);
         return CurrentCellSize;
     }
-    IEnumerator NDISearch()
-    {
-        yield return new WaitForSecondsRealtime(5);
-        ndi_names = NdiFinder.sourceNames.ToList();
 
+    public void RefreshNDI()
+    {
+        List<string> activeNdiList = new List<string>();
+        foreach (string _sourceName in ndi_names)
+        {
+            GameObject _source = GameObject.Find(_sourceName);
+            if (_source.tag == "ActiveNdi")
+            {
+                activeNdiList.Add(_sourceName);
+            }
+            GameObject.Destroy(_source);
+        }
+
+        ndi_names = NdiFinder.sourceNames.ToList();
+        NDISearch();
+        SOURCE_DROPDOWN.GetComponent<SourceManager>().UpdateDropdownSources(ndi_names);
+
+        Debug.Log(activeNdiList.Count);
+        if (activeNdiList != null)
+        {
+            Debug.Log("activeNdiList != null");
+            foreach (string _activeNdi in activeNdiList)
+            {
+                GameObject _source = GameObject.Find(_activeNdi);
+                GameObject PanelGameObj = GameObject.Find("Panel");
+
+                _source.transform.SetParent(PanelGameObj.transform);
+                _source.tag = "ActiveNdi";
+                Debug.Log("Readded Active Source: " + _source.name);
+            }
+        }
+        Debug.Log("There are [" + ndi_names.Count + "] entries in ndi_names");
+    }
+
+    public void NDISearch()
+    {
         int i = 0;
         foreach (string _sourceName in ndi_names)
         {
@@ -64,6 +99,5 @@ public class NDIManger : MonoBehaviour
             Debug.Log(i + " : " + _sourceName.ToString());
             i ++;
         }
-        yield return null;
     }
 }
