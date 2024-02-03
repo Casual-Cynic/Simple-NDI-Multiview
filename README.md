@@ -25,4 +25,4 @@ This was a pretty quick and dirty project that I threw together in the total tim
 + The project uses [Unity 2022.3.14f1](unityhub://2022.3.14f1/eff2de9070d8). If you dont already, I suggest using [Unity Hub](https://unity.com/unity-hub).
 + You *MUST* have [v2.1.0](https://github.com/keijiro/KlakNDI/releases/tag/2.1.0) of the KlakNDI package installed. Make sure to follow their [install guide](https://github.com/keijiro/KlakNDI?tab=readme-ov-file#how-to-install) if this project doesnt come with it preinstalled.
 
-<img src="https://github.com/Casual-Cynic/Simple-NDI-Multiview/assets/28310036/7910b3c1-f9cd-48f3-97eb-fc2bc4b80e2e" width="100" height="100"> <img src="https://github.com/Casual-Cynic/Simple-NDI-Multiview/assets/28310036/0f4877d1-d26e-4a3e-9bd6-33f2a11c1a84" width="100" height="100">
+<img src="https://github.com/Casual-Cynic/Simple-NDI-Multiview/assets/28310036/7910b3c1-f9cd-48f3-97eb-fc2bc4b80e2e" width="220" height="220"> <img src="https://github.com/Casual-Cynic/Simple-NDI-Multiview/assets/28310036/659a8af0-afe5-4149-920e-324c27f608c7" width="220" height="220">
