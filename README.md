@@ -3,8 +3,7 @@
 A free and open source multiviewer built with Unity and uses keijiro's [KlakNDI](https://github.com/keijiro/KlakNDI) integration.
 
 ### Current Functionality
-+ automatically tiling of as many sources as your PC can handle
-thats pretty much it. At least for now.
++ automatically tiling of as many sources as your PC can handle. Thats pretty much it. At least for now.
 
 This was a pretty quick and dirty project that I threw together in the total time of an afternoon or 2. so because of that it's missing a lot of "creature comforts" *(aka stuff that should already exist in this kind of tool)*, so below is a list of features that im working on getting up and running in future releases.
 
