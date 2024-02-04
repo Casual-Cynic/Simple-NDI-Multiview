@@ -10,7 +10,6 @@ This was a pretty quick and dirty project that I threw together in the total tim
 
 ### Upcoming Functionality
 
-+ A refresh sources button. Atm it only looks for sources on startup.
 + Customizeable background/splash image
 + More logical source management. a way to place the NDI sources where you want them. Drag and drop hopefully
 + The abiity to output the multiview as NDI itself. Hopefully allowing for nesting NDI sources
