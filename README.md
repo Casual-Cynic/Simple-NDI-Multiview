@@ -11,7 +11,8 @@ This was a pretty quick and dirty project that I threw together in the total tim
 
 + Customizeable background/splash image
 + More logical source management. a way to place the NDI sources where you want them. Drag and drop hopefully
-+ The abiity to output the multiview as NDI itself. Hopefully allowing for nesting NDI sources
++ Split Screen/more layout options
++ The abiity to output the multiview as NDI itself as well as Group NDI Managements. Hopefully allowing for nesting NDI sources
 + General UI clean up. make it a bit more presentable.
 
 ## Screenshots
